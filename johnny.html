@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            text-align: center;
+            color: white;
+        }
+        body{
+            background-image: url('https://i.pinimg.com/originals/c3/8c/d7/c38cd7022e1953651d42e6e1430b6464.jpg');
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+        }
+        .main{
+            background-image: linear-gradient(#7fc4e7,#ffdb63);
+            border-radius: 30px;
+            padding: 10px;
+            margin-top: 450px;
+            border: solid 1px #ed73e1;
+        }
+    </style>
+</head>
+<body>
+        <div class="main">
+            <h1>o seu resultado é Johnny</h1>
+            <h1 id="porcentagem"></h1>
+        </div>
+    <script>
+     let bela = Number(localStorage.getItem('contBela' ))
+    let branca = Number(localStorage.getItem('contBranca' ))
+    let elsa = Number(localStorage.getItem('contFrozen' ))
+    let vanelope = Number(localStorage.getItem('contVanelope'))
+    
+    let total = bela+branca+elsa+vanelope
+    let porc =  (vanelope/total)*100
+    document.getElementById('porcentagem').innerHTML = porc + "%"
+    </script>
+</body>
+</html>

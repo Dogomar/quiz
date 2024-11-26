@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            text-align: center;
+            color: white;
+        }
+        body{
+            background-image: url('https://wallpaper.forfun.com/fetch/99/999dc7fc6e931cfacf3a5a202bd6eb58.jpeg');
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+        }
+        .main{
+            background-image: linear-gradient(#e40d8a,#0079ff);
+            border-radius: 30px;
+            padding: 10px;
+            margin-top: 500px;
+            border: solid 1px #ed73e1;
+        }
+</style>
+</head>
+<body>
+    <div class="main">
+        <h1>o seu resultado é Josuke</h1>
+        <h1 id="porcentagem"></h1>
+    </div>
+    <script>
+     let bela = Number(localStorage.getItem('contBela' ))
+    let branca = Number(localStorage.getItem('contBranca' ))
+    let elsa = Number(localStorage.getItem('contFrozen' ))
+    let vanelope = Number(localStorage.getItem('contVanelope'))
+    
+    let total = bela+branca+elsa+vanelope
+    let porc =  (branca/total)*100
+    document.getElementById('porcentagem').innerHTML = porc + "%"
+    </script>
+</body>
+</html>

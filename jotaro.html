@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            text-align: center;
+            color: white;
+        }
+        body{
+            background-image: url('https://images.squarespace-cdn.com/content/v1/5fe4caeadae61a2f19719512/acfece2a-9e62-48a6-87bb-e8acf2473ddd/Jotaro+Kujo+Counting+Stars');
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+        }
+        .main{
+            background-image: linear-gradient(#febdf7,#bac9ea);
+            border-radius: 30px;
+            padding: 10px;
+            margin-top: 300px;
+            border: solid 1px #ed73e1;
+        }
+    </style>
+</head>
+<body>
+        <div class="main">
+            <h1>o seu resultado é Jotaro</h1>
+            <h1 id="porcentagem"></h1>
+        </div>
+
+    <script>
+     let bela = Number(localStorage.getItem('contBela' ))
+    let branca = Number(localStorage.getItem('contBranca' ))
+    let elsa = Number(localStorage.getItem('contFrozen' ))
+    let vanelope = Number(localStorage.getItem('contVanelope'))
+    
+    let total = bela+branca+elsa+vanelope
+    let porc =  (bela/total)*100
+    document.getElementById('porcentagem').innerHTML = porc + "%"
+    </script>
+</body>
+</html>
